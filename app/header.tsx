@@ -9,7 +9,7 @@ function Header() {
         <div className="header__container">
             <div className="header__row">
                 <div className="header__left">
-                    <a href="#" className="header__title">SKINSTRIC</a>
+                    <a href="/" className="header__title">SKINSTRIC</a>
                     <div className="header__intro">
                         <Image src={LeftBracket} alt="left bracket" className="left__bracket"></Image>
                         <p className="header__intro--text">INTRO</p>
