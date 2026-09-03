@@ -192,3 +192,107 @@ a {
   font-weight: 500;
   font-size: 14px;
 }
+
+/* Testing Page */
+
+.testing__container{
+  margin: 0;
+  display: flex;
+  height: calc(100vh - 64px);
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.progress__container{
+  position: fixed;
+  left: 30;
+  top: 72;
+}
+
+.progress__text {
+  font-size: 12;
+  font-weight: 700;
+  color:#1a1b1c;
+}
+
+.testing__row{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 160px;
+  width: 100%;
+}
+
+.intro__text {
+  color:#1a1b1c83;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.testing__form--wrapper {
+  border-bottom: transparent;
+  width: 440px;
+}
+
+.testing__input {
+  font-size: 48px;
+  width: inherit;
+  text-align: center;
+  border: transparent;
+  border-bottom: 1px solid black;
+  letter-spacing: -7%;
+  padding-top: 4px;
+  z-index: 10;
+  outline: none;
+}
+
+.large__rectangle,
+.medium__rectangle,
+.small__rectangle {
+  z-index: -1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.back__button {
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  position: absolute;
+  bottom: 25;
+  left: 25;
+  cursor: pointer;
+  color:#1a1b1c;
+}
+
+.back__button:hover,
+.proceed__button:hover {
+  transform: scale(110%);
+}
+
+.proceed__button {
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  position: absolute;
+  bottom: 25;
+  right: 25;
+  cursor: pointer;
+  color:#1a1b1c;
+}

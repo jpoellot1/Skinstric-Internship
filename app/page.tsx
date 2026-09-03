@@ -23,10 +23,12 @@ export default function Home() {
       </div>
       <div className="right__section">
         <Image src={RightBorder} alt="right border"></Image>
-        <button className="right__button">
-          <span>TAKE TEST</span>
-          <Image src={RightButton} alt="right button"></Image>
-        </button>
+        <a href="/testing">
+          <button className="right__button">
+            <span>TAKE TEST</span>
+            <Image src={RightButton} alt="right button"></Image>
+          </button>
+        </a>
       </div>
       <p className="main__text">
         SKINSTRIC DEVELOPED AN A.I. THAT CREATES A <br/>
