@@ -80,9 +80,9 @@ export default function Testing() {
       </a>
       { step === 'proceed' ?(
         <a className="proceed__button" href="/results">
-        <span>Proceed</span>
-        <Image src={RightButton} alt='proceed button'></Image>
-      </a>
+          <span>PROCEED</span>
+          <Image src={RightButton} alt='proceed button'></Image>
+        </a>
       ):(
         <></>
       )}

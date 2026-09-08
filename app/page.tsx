@@ -1,8 +1,12 @@
+"use client";
+
 import Image from "next/image";
 import LeftBorder from "./Assets/Rectangle 2779.png"
 import LeftButton from "./Assets/button-icon-left.png"
 import RightBorder from "./Assets/Rectangle 2778.png"
 import RightButton from "./Assets/button-icon-right.png"
+import LargeRectangle from "./Assets/Rectangle Large.png"
+import MediumRectangle from "./Assets/Rectangle Medium.png"
 
 export default function Home() {
   return (
@@ -20,6 +24,8 @@ export default function Home() {
           <br/> 
           skincare
         </h1>
+        <Image src={LargeRectangle} alt='large rectangle' className='large__rectangle--home'></Image>
+        <Image src={MediumRectangle} alt='medium rectangle' className='medium__rectangle--home'></Image>
       </div>
       <div className="right__section">
         <Image src={RightBorder} alt="right border"></Image>
@@ -34,7 +40,13 @@ export default function Home() {
         SKINSTRIC DEVELOPED AN A.I. THAT CREATES A <br/>
         HIGHLY-PERSONALIZED ROUTINE TAILORED TO <br/>
         WHAT YOUR SKIN NEEDS.
-        </p>
+      </p>
+      <a href="/testing">
+        <button className="enter__button">
+          <span>ENTER EXPERIENCE</span>
+          <Image src={RightButton} alt="right button"></Image>
+        </button>
+      </a>
     </div>
   );
 }

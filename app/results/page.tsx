@@ -9,17 +9,20 @@ import LeftButton from "../Assets/button-icon-left.png"
 import CameraIcon from "../Assets/camera-icon.png"
 import GalleryIcon from "../Assets/gallery-icon.png"
 import ScanLine from "../Assets/Downward-line.png"
-import { useAnalysis } from '../context/AnalysisContext'
 import { useRouter } from 'next/navigation'
 
 export default function Results() {
   const fileInputRef = useRef<HTMLInputElement | null>(null)
-  const { setAnalysisResult } = useAnalysis()
   const [loading, setLoading] = useState(false)
+  const [showCameraAccess, setShowCameraAccess] = useState(false)
   const router = useRouter()
 
   const handleGalleryClick = () => {
     fileInputRef.current?.click()
+  }
+
+  const handleCameraClick = () => {
+    setShowCameraAccess(true)
   }
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -39,7 +42,7 @@ export default function Results() {
           body: JSON.stringify({ image: base64String }),
         })
         const data = await response.json()
-        setAnalysisResult(data)
+        sessionStorage.setItem('analysisResult', JSON.stringify(data))
       } catch (error) {
         console.error('Error uploading file:', error)
       } finally {
@@ -65,7 +68,9 @@ export default function Results() {
         <div className="results__row">
             <div className="camera__wrapper">
                 <div className="camera">
-                    <Image src={CameraIcon} alt="camera icon" className='camera__icon'></Image>
+                    <button type="button" className="camera__button" onClick={handleCameraClick} aria-label="Use camera">
+                      <Image src={CameraIcon} alt="camera icon" className='camera__icon'></Image>
+                    </button>
                     <div className="camera__text">
                         <Image src={ScanLine} alt='upward line' className='upward__line'></Image>
                         <p>ALLOW A.I<br/>TO SCAN YOUR FACE</p>
@@ -99,10 +104,23 @@ export default function Results() {
                 </div>
             </div>
         )}
-      <a className="back__button" href="/">
+      <a className="back__button" href="/testing">
         <Image src={LeftButton} alt='back button'></Image>
         <span>BACK</span>
       </a>
+      {showCameraAccess && (
+        <div className="access__overlay" role="dialog" aria-modal="true" aria-labelledby="camera-access-title">
+          <div className="access__wrapper">
+            <h2 className="access__top" id="camera-access-title">
+              ALLOW A.I. TO ACCESS YOUR CAMERA
+            </h2>
+            <div className="access__bottom">
+              <button type="button" className='deny__button' onClick={() => setShowCameraAccess(false)}>DENY</button>
+              <button type="button" className='allow__button' onClick={() => router.push('/camera')}>ALLOW</button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
