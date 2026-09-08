@@ -840,6 +840,7 @@ a {
   border: 1px solid black;
   font-size: 14px;
   font-weight: 500;
+  cursor: not-allowed;
 }
 
 .confirm__button {
@@ -847,6 +848,7 @@ a {
   height: 35px;
   background-color: black;
   color: white;
+  cursor: not-allowed;
 }
 
 /* Camera Page */
