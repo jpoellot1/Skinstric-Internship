@@ -1,36 +1,21 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<h1 align="center">Skinstric AI</h1>
 
-## Getting Started
 
-First, run the development server:
+The culmination of my internship with Skinstric AI. This internship consisted of creating a website that allowed a user to either upload a picture of themselves or take a selfie. The picture was then analyzed and the user was given an AI approximation of their race, gender, and age. 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<h2 align="center">Stack Used</h2>
+*Next.js <br/>
+*TypeScript <br/>
+*CSS <br/>
+*HTML
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+<h2 align="center">Main Features</h2>
+*The user has the ability upload a photo of themselves or take a selfie.<br/>
+*The photo is uploaded to the API in base64 format and then the API will return an estimation of the user's age, race, and gender. <br/>
+*All of the info returned from the API is shown in a dynamic format that allows the user to click between the categories and their sub-categories.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+<h2 align="center">Live Demo Link</h2>
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+https://skinstric-internship-beta-ten.vercel.app/
